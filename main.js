@@ -1,8 +1,11 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, nativeTheme} = require('electron')
 const path = require('path')
 
-function createWindow () {
+function createWindow () {  
+  // https://www.electronjs.org/docs/api/native-theme#nativethemethemesource
+  nativeTheme.themeSource = 'dark'
+  
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
